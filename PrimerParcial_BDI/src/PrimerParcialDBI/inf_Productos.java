@@ -41,15 +41,15 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        txtTelefono_Cliente = new javax.swing.JTextField();
-        txtEmail_Cliente = new javax.swing.JTextField();
+        txtID_Proveedor = new javax.swing.JTextField();
+        txtEXistencias = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtNIT_Cliente = new javax.swing.JTextField();
+        txtID_Producto = new javax.swing.JTextField();
         btnEliminar = new javax.swing.JButton();
-        txtNombre_Cliente = new javax.swing.JTextField();
+        txtNombre_Producto = new javax.swing.JTextField();
         btnRegistrar = new javax.swing.JButton();
-        txtDireccion_Cliente = new javax.swing.JTextField();
+        txtID_Inventario = new javax.swing.JTextField();
         btnModificar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
 
@@ -65,31 +65,31 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel1.setText("NIT Cliente");
+        jLabel1.setText("ID Producto");
 
-        jLabel4.setText("Telefono");
+        jLabel4.setText("ID_Proveedor");
 
-        jLabel5.setText("Email");
+        jLabel5.setText("Existencias");
 
-        txtTelefono_Cliente.addActionListener(new java.awt.event.ActionListener() {
+        txtID_Proveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTelefono_ClienteActionPerformed(evt);
+                txtID_ProveedorActionPerformed(evt);
             }
         });
 
-        txtEmail_Cliente.addActionListener(new java.awt.event.ActionListener() {
+        txtEXistencias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEmail_ClienteActionPerformed(evt);
+                txtEXistenciasActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Nombre Cliente");
+        jLabel2.setText("Nombre Producto");
 
-        jLabel3.setText("Dirección Cliente");
+        jLabel3.setText("ID Inventario");
 
-        txtNIT_Cliente.addActionListener(new java.awt.event.ActionListener() {
+        txtID_Producto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNIT_ClienteActionPerformed(evt);
+                txtID_ProductoActionPerformed(evt);
             }
         });
 
@@ -101,9 +101,9 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             }
         });
 
-        txtNombre_Cliente.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre_Producto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre_ClienteActionPerformed(evt);
+                txtNombre_ProductoActionPerformed(evt);
             }
         });
 
@@ -114,9 +114,9 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             }
         });
 
-        txtDireccion_Cliente.addActionListener(new java.awt.event.ActionListener() {
+        txtID_Inventario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDireccion_ClienteActionPerformed(evt);
+                txtID_InventarioActionPerformed(evt);
             }
         });
 
@@ -152,12 +152,12 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtTelefono_Cliente, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                                .addComponent(txtEmail_Cliente))
+                                .addComponent(txtID_Proveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                                .addComponent(txtEXistencias))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNIT_Cliente, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                                .addComponent(txtNombre_Cliente)
-                                .addComponent(txtDireccion_Cliente))))
+                                .addComponent(txtID_Producto, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                                .addComponent(txtNombre_Producto)
+                                .addComponent(txtID_Inventario))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -181,15 +181,15 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtNIT_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtID_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtNombre_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombre_Producto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(txtDireccion_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtID_Inventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -197,9 +197,9 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                         .addGap(13, 13, 13)
                         .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtTelefono_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtID_Proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
-                        .addComponent(txtEmail_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtEXistencias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrar)
@@ -212,6 +212,8 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                     .addComponent(btnLimpiar))
                 .addGap(24, 24, 24))
         );
+
+        getAccessibleContext().setAccessibleName("Produrcto");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -226,10 +228,10 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-                txtNombre_Cliente.setText(rs.getString("nombre"));
-                txtDireccion_Cliente.setText(rs.getString("direccion"));
-                txtTelefono_Cliente.setText(rs.getString("telefono"));
-                txtEmail_Cliente.setText(rs.getString("correo"));
+                txtNombre_Producto.setText(rs.getString("nombre"));
+                txtID_Inventario.setText(rs.getString("direccion"));
+                txtID_Proveedor.setText(rs.getString("telefono"));
+                txtEXistencias.setText(rs.getString("correo"));
 
                 btnModificar.setEnabled(true);
                 btnEliminar.setEnabled(true);
@@ -246,17 +248,17 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         // bitacora_busqueda();
     }//GEN-LAST:event_btnBuscarActionPerformed
 
-    private void txtTelefono_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefono_ClienteActionPerformed
+    private void txtID_ProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtID_ProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTelefono_ClienteActionPerformed
+    }//GEN-LAST:event_txtID_ProveedorActionPerformed
 
-    private void txtEmail_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmail_ClienteActionPerformed
+    private void txtEXistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEXistenciasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmail_ClienteActionPerformed
+    }//GEN-LAST:event_txtEXistenciasActionPerformed
 
-    private void txtNIT_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNIT_ClienteActionPerformed
+    private void txtID_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtID_ProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNIT_ClienteActionPerformed
+    }//GEN-LAST:event_txtID_ProductoActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         // TODO add your handling code here:
@@ -269,11 +271,11 @@ public class inf_Productos extends javax.swing.JInternalFrame {
 
             // bitacora_eliminar();
             JOptionPane.showMessageDialog(this, "¡ELIMINACION EXITOSA!", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
-            txtNIT_Cliente.setText("");
-            txtNombre_Cliente.setText("");
-            txtDireccion_Cliente.setText("");
-            txtTelefono_Cliente.setText("");
-            txtEmail_Cliente.setText("");
+            txtID_Producto.setText("");
+            txtNombre_Producto.setText("");
+            txtID_Inventario.setText("");
+            txtID_Proveedor.setText("");
+            txtEXistencias.setText("");
             txtbuscado.setText("");
             btnRegistrar.setEnabled(true);
             btnModificar.setEnabled(false);
@@ -284,9 +286,9 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void txtNombre_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre_ClienteActionPerformed
+    private void txtNombre_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre_ProductoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre_ClienteActionPerformed
+    }//GEN-LAST:event_txtNombre_ProductoActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
@@ -295,30 +297,30 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             //localhost es 127.0.0.1
             PreparedStatement pst = cn.prepareStatement("insert into cliente values(?,?,?,?,?)");
 
-            pst.setString(1, txtNIT_Cliente.getText().trim());
-            pst.setString(2, txtNombre_Cliente.getText());
-            pst.setString(3, txtDireccion_Cliente.getText());
-            pst.setString(4, txtTelefono_Cliente.getText().trim());
-            pst.setString(5, txtEmail_Cliente.getText());
+            pst.setString(1, txtID_Producto.getText().trim());
+            pst.setString(2, txtNombre_Producto.getText());
+            pst.setString(3, txtID_Inventario.getText());
+            pst.setString(4, txtID_Proveedor.getText().trim());
+            pst.setString(5, txtEXistencias.getText());
 
             //bitacora_guardar();
             pst.executeUpdate();
 
             JOptionPane.showMessageDialog(this, "¡REGISTRO EXITOSO!", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
-            txtNIT_Cliente.setText("");
-            txtNombre_Cliente.setText("");
-            txtDireccion_Cliente.setText("");
-            txtTelefono_Cliente.setText("");
-            txtEmail_Cliente.setText("");
+            txtID_Producto.setText("");
+            txtNombre_Producto.setText("");
+            txtID_Inventario.setText("");
+            txtID_Proveedor.setText("");
+            txtEXistencias.setText("");
             txtbuscado.setText("");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error en registro", "Warning", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
-    private void txtDireccion_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccion_ClienteActionPerformed
+    private void txtID_InventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtID_InventarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDireccion_ClienteActionPerformed
+    }//GEN-LAST:event_txtID_InventarioActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // TODO add your handling code here:
@@ -328,20 +330,20 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
             PreparedStatement pst = cn.prepareStatement("update cliente set  nombre = ?, direccion = ?, telefono = ?, correo = ?  where nit_cliente =" + ID);
 
-            pst.setString(1, txtNombre_Cliente.getText());
-            pst.setString(2, txtDireccion_Cliente.getText());
-            pst.setString(3, txtTelefono_Cliente.getText().trim());
-            pst.setString(4, txtEmail_Cliente.getText());
+            pst.setString(1, txtNombre_Producto.getText());
+            pst.setString(2, txtID_Inventario.getText());
+            pst.setString(3, txtID_Proveedor.getText().trim());
+            pst.setString(4, txtEXistencias.getText());
 
             pst.executeUpdate();
 
             //bitacora_modificar();
             JOptionPane.showMessageDialog(this, "¡MODIFICACION EXITOSA!", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
-            txtNIT_Cliente.setText("");
-            txtNombre_Cliente.setText("");
-            txtDireccion_Cliente.setText("");
-            txtTelefono_Cliente.setText("");
-            txtEmail_Cliente.setText("");
+            txtID_Producto.setText("");
+            txtNombre_Producto.setText("");
+            txtID_Inventario.setText("");
+            txtID_Proveedor.setText("");
+            txtEXistencias.setText("");
 
             txtbuscado.setText("");
             btnRegistrar.setEnabled(true);
@@ -353,11 +355,11 @@ public class inf_Productos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        txtNIT_Cliente.setText("");
-        txtNombre_Cliente.setText("");
-        txtDireccion_Cliente.setText("");
-        txtTelefono_Cliente.setText("");
-        txtEmail_Cliente.setText("");
+        txtID_Producto.setText("");
+        txtNombre_Producto.setText("");
+        txtID_Inventario.setText("");
+        txtID_Proveedor.setText("");
+        txtEXistencias.setText("");
         txtbuscado.setText("");
         btnRegistrar.setEnabled(true);
         btnModificar.setEnabled(false);
@@ -377,11 +379,11 @@ public class inf_Productos extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txtDireccion_Cliente;
-    private javax.swing.JTextField txtEmail_Cliente;
-    private javax.swing.JTextField txtNIT_Cliente;
-    private javax.swing.JTextField txtNombre_Cliente;
-    private javax.swing.JTextField txtTelefono_Cliente;
+    private javax.swing.JTextField txtEXistencias;
+    private javax.swing.JTextField txtID_Inventario;
+    private javax.swing.JTextField txtID_Producto;
+    private javax.swing.JTextField txtID_Proveedor;
+    private javax.swing.JTextField txtNombre_Producto;
     private javax.swing.JTextField txtbuscado;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,6 +7,9 @@
     <Property name="title" type="java.lang.String" value="Clientes"/>
     <Property name="visible" type="boolean" value="true"/>
   </Properties>
+  <AccessibilityProperties>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Produrcto"/>
+  </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
@@ -39,13 +42,13 @@
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtTelefono_Cliente" alignment="0" pref="216" max="32767" attributes="0"/>
-                              <Component id="txtEmail_Cliente" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtID_Proveedor" alignment="0" pref="216" max="32767" attributes="0"/>
+                              <Component id="txtEXistencias" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtNIT_Cliente" alignment="0" pref="216" max="32767" attributes="0"/>
-                              <Component id="txtNombre_Cliente" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txtDireccion_Cliente" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtID_Producto" alignment="0" pref="216" max="32767" attributes="0"/>
+                              <Component id="txtNombre_Producto" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txtID_Inventario" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -80,17 +83,17 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNIT_Cliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtID_Producto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNombre_Cliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNombre_Producto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtDireccion_Cliente" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtID_Inventario" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -100,9 +103,9 @@
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="txtTelefono_Cliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtID_Proveedor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="txtEmail_Cliente" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtEXistencias" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="58" max="32767" attributes="0"/>
@@ -135,42 +138,42 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="NIT Cliente"/>
+        <Property name="text" type="java.lang.String" value="ID Producto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Telefono"/>
+        <Property name="text" type="java.lang.String" value="ID_Proveedor"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Email"/>
+        <Property name="text" type="java.lang.String" value="Existencias"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtTelefono_Cliente">
+    <Component class="javax.swing.JTextField" name="txtID_Proveedor">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefono_ClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtID_ProveedorActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtEmail_Cliente">
+    <Component class="javax.swing.JTextField" name="txtEXistencias">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmail_ClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEXistenciasActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Nombre Cliente"/>
+        <Property name="text" type="java.lang.String" value="Nombre Producto"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Direcci&#xf3;n Cliente"/>
+        <Property name="text" type="java.lang.String" value="ID Inventario"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNIT_Cliente">
+    <Component class="javax.swing.JTextField" name="txtID_Producto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNIT_ClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtID_ProductoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnEliminar">
@@ -182,9 +185,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNombre_Cliente">
+    <Component class="javax.swing.JTextField" name="txtNombre_Producto">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre_ClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre_ProductoActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnRegistrar">
@@ -195,9 +198,9 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtDireccion_Cliente">
+    <Component class="javax.swing.JTextField" name="txtID_Inventario">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDireccion_ClienteActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtID_InventarioActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnModificar">

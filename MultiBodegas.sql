@@ -31,6 +31,7 @@ id_producto varchar(128) primary key,
 nombre_produecto varchar(128) not null,
 id_inventario varchar(80) not null,
 id_proveedor varchar(128) not null,
+precio double not null,
 existencias int not null,
 
 foreign key (id_proveedor) references
