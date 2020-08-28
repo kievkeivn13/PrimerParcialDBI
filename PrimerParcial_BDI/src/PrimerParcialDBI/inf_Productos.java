@@ -253,7 +253,7 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                 btnRegistrar.setEnabled(false);
 
             } else {
-                JOptionPane.showMessageDialog(null, "Cliente no registrado.");
+                JOptionPane.showMessageDialog(null, "Producto no registrado.");
             }
 
         } catch (Exception e) {
@@ -347,7 +347,7 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             String ID = txtbuscado.getText().trim();
 
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
-            PreparedStatement pst = cn.prepareStatement("update producto set  nombre_poducto = ?, id_inventario = ?, id_proveedor = ?, precio = ?, existencias =?  where id_producto =" + ID);
+            PreparedStatement pst = cn.prepareStatement("update producto set  nombre_producto = ?, id_inventario = ?, id_proveedor = ?, precio = ?, existencias =?  where id_producto =" + ID);
 
             pst.setString(1, txtNombre_Producto.getText());
             pst.setString(2, txtID_Inventario.getText());

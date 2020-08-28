@@ -28,7 +28,7 @@ nombre varchar(80) not null
 
 create table producto(
 id_producto varchar(128) primary key,
-nombre_produecto varchar(128) not null,
+nombre_producto varchar(128) not null,
 id_inventario varchar(80) not null,
 id_proveedor varchar(128) not null,
 precio double not null,
@@ -103,3 +103,14 @@ cuentas(id_cuenta),
 foreign key (id_usuario) references
 usuario(id_usuario)
 )engine=innodb;
+/*INSERTS*/
+insert into usuario VALUES("1", "admin", "123");
+
+insert into proveedor VALUES("1", "proveedor1", "zona 5");
+
+insert into inventarios VALUES("1", "inventario 1");
+
+insert into producto VALUES("1", "leche", "1", "1", 300, 7);
+insert into producto VALUES("2", "carton", "1", "1", 1000, 10);
+insert into producto VALUES("3", "antorcha", "1", "1", 5000, 12);
+insert into producto VALUES("4", "alquitran", "1", "1", 200, 5);
