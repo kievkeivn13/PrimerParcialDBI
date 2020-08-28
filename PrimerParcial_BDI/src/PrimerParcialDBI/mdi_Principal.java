@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package PrimerParcialDBI;
+
 import java.awt.Dimension;
 import java.sql.*;
 
@@ -16,7 +17,7 @@ public class mdi_Principal extends javax.swing.JFrame {
     public static String BD = "jdbc:mysql://localhost/multib";
     public static String Usuario = "root";
     public static String Contraseña = "6182";
-    
+
     public static Connection getConeccion() {
         Connection cn = null;
         try {
@@ -29,12 +30,13 @@ public class mdi_Principal extends javax.swing.JFrame {
         return cn;
 
     }
-    
+
     /**
      * Creates new form mdi_Principal
      */
     public mdi_Principal() {
         initComponents();
+        this.setExtendedState(mdi_Principal.MAXIMIZED_BOTH);
     }
 
     /**
@@ -78,7 +80,7 @@ public class mdi_Principal extends javax.swing.JFrame {
         editMenu.setText("Catalogos");
 
         deleteMenuItem.setMnemonic('d');
-        deleteMenuItem.setText("Clientes");
+        deleteMenuItem.setText("Producto");
         deleteMenuItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteMenuItemActionPerformed(evt);
@@ -92,7 +94,12 @@ public class mdi_Principal extends javax.swing.JFrame {
         editMenu1.setText("Procesos");
 
         deleteMenuItem2.setMnemonic('d');
-        deleteMenuItem2.setText("Ventas");
+        deleteMenuItem2.setText("Compras");
+        deleteMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteMenuItem2ActionPerformed(evt);
+            }
+        });
         editMenu1.add(deleteMenuItem2);
 
         menuBar.add(editMenu1);
@@ -132,12 +139,21 @@ public class mdi_Principal extends javax.swing.JFrame {
 
     private void deleteMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteMenuItemActionPerformed
         // TODO add your handling code here:
-        inf_Productos c =new inf_Productos();
+        inf_Productos c = new inf_Productos();
         panel.add(c);
-         Dimension desktopSize = panel.getSize();
+        Dimension desktopSize = panel.getSize();
         Dimension FrameSize = c.getSize();
-         c.setLocation((desktopSize.width-FrameSize.width)/2,(desktopSize.height-FrameSize.height)/2);
+        c.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
     }//GEN-LAST:event_deleteMenuItemActionPerformed
+
+    private void deleteMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteMenuItem2ActionPerformed
+        inf_Compra c = new inf_Compra();
+        panel.add(c);
+        Dimension desktopSize = panel.getSize();
+        Dimension FrameSize = c.getSize();
+        c.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments

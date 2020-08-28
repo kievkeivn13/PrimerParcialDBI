@@ -1,6 +1,5 @@
 package PrimerParcialDBI;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -15,14 +14,13 @@ import javax.swing.JOptionPane;
  */
 /**
  *
- * @author kievk
+ * @author Kevin Flores
  */
 public class inf_Productos extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form inf_Cliente
      */
-   
     public inf_Productos() {
         initComponents();
     }
@@ -42,7 +40,7 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtID_Proveedor = new javax.swing.JTextField();
-        txtEXistencias = new javax.swing.JTextField();
+        txtPrecio = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtID_Producto = new javax.swing.JTextField();
@@ -52,10 +50,12 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         txtID_Inventario = new javax.swing.JTextField();
         btnModificar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        txtExistencias = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
-        setTitle("Clientes");
+        setTitle("Productos");
         setVisible(true);
 
         btnBuscar.setText("Buscar");
@@ -69,7 +69,7 @@ public class inf_Productos extends javax.swing.JInternalFrame {
 
         jLabel4.setText("ID_Proveedor");
 
-        jLabel5.setText("Existencias");
+        jLabel5.setText("Precio");
 
         txtID_Proveedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,9 +77,9 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             }
         });
 
-        txtEXistencias.addActionListener(new java.awt.event.ActionListener() {
+        txtPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEXistenciasActionPerformed(evt);
+                txtPrecioActionPerformed(evt);
             }
         });
 
@@ -135,29 +135,20 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             }
         });
 
+        jLabel6.setText("Existencias");
+
+        txtExistencias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtExistenciasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtID_Proveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                                .addComponent(txtEXistencias))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtID_Producto, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                                .addComponent(txtNombre_Producto)
-                                .addComponent(txtID_Inventario))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -172,7 +163,26 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtID_Proveedor, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                                .addComponent(txtPrecio)
+                                .addComponent(txtExistencias, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtID_Producto, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
+                                .addComponent(txtNombre_Producto)
+                                .addComponent(txtID_Inventario)))))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -199,8 +209,12 @@ public class inf_Productos extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtID_Proveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(7, 7, 7)
-                        .addComponent(txtEXistencias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtExistencias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegistrar)
                     .addComponent(btnEliminar)
@@ -222,16 +236,17 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         try {
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
-            PreparedStatement pst = cn.prepareStatement("select * from cliente where nit_cliente =?");
+            PreparedStatement pst = cn.prepareStatement("select * from producto where id_producto =?");
             pst.setString(1, txtbuscado.getText().trim());
 
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-                txtNombre_Producto.setText(rs.getString("nombre"));
-                txtID_Inventario.setText(rs.getString("direccion"));
-                txtID_Proveedor.setText(rs.getString("telefono"));
-                txtEXistencias.setText(rs.getString("correo"));
+                txtNombre_Producto.setText(rs.getString("nombre_producto"));
+                txtID_Inventario.setText(rs.getString("id_inventario"));
+                txtID_Proveedor.setText(rs.getString("id_proveedor"));
+                txtPrecio.setText(rs.getString("existencias"));
+                txtExistencias.setText(rs.getString("precio"));
 
                 btnModificar.setEnabled(true);
                 btnEliminar.setEnabled(true);
@@ -252,9 +267,9 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtID_ProveedorActionPerformed
 
-    private void txtEXistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEXistenciasActionPerformed
+    private void txtPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEXistenciasActionPerformed
+    }//GEN-LAST:event_txtPrecioActionPerformed
 
     private void txtID_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtID_ProductoActionPerformed
         // TODO add your handling code here:
@@ -264,7 +279,7 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         try {
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
-            PreparedStatement pst = cn.prepareStatement("delete from cliente where nit_cliente = ?");
+            PreparedStatement pst = cn.prepareStatement("delete from producto where id_producto = ?");
 
             pst.setString(1, txtbuscado.getText().trim());
             pst.executeUpdate();
@@ -275,8 +290,10 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             txtNombre_Producto.setText("");
             txtID_Inventario.setText("");
             txtID_Proveedor.setText("");
-            txtEXistencias.setText("");
+            txtPrecio.setText("");
+            txtExistencias.setText("");
             txtbuscado.setText("");
+
             btnRegistrar.setEnabled(true);
             btnModificar.setEnabled(false);
             btnEliminar.setEnabled(false);
@@ -295,13 +312,14 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         try {
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
             //localhost es 127.0.0.1
-            PreparedStatement pst = cn.prepareStatement("insert into cliente values(?,?,?,?,?)");
+            PreparedStatement pst = cn.prepareStatement("insert into producto values(?,?,?,?,?,?)");
 
             pst.setString(1, txtID_Producto.getText().trim());
             pst.setString(2, txtNombre_Producto.getText());
             pst.setString(3, txtID_Inventario.getText());
             pst.setString(4, txtID_Proveedor.getText().trim());
-            pst.setString(5, txtEXistencias.getText());
+            pst.setString(5, txtPrecio.getText().trim());
+            pst.setString(6, txtExistencias.getText().trim());
 
             //bitacora_guardar();
             pst.executeUpdate();
@@ -311,7 +329,8 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             txtNombre_Producto.setText("");
             txtID_Inventario.setText("");
             txtID_Proveedor.setText("");
-            txtEXistencias.setText("");
+            txtPrecio.setText("");
+            txtExistencias.setText("");
             txtbuscado.setText("");
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(this, "Error en registro", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -328,12 +347,13 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             String ID = txtbuscado.getText().trim();
 
             Connection cn = DriverManager.getConnection(mdi_Principal.BD, mdi_Principal.Usuario, mdi_Principal.Contraseña);
-            PreparedStatement pst = cn.prepareStatement("update cliente set  nombre = ?, direccion = ?, telefono = ?, correo = ?  where nit_cliente =" + ID);
+            PreparedStatement pst = cn.prepareStatement("update producto set  nombre_poducto = ?, id_inventario = ?, id_proveedor = ?, precio = ?, existencias =?  where id_producto =" + ID);
 
             pst.setString(1, txtNombre_Producto.getText());
             pst.setString(2, txtID_Inventario.getText());
             pst.setString(3, txtID_Proveedor.getText().trim());
-            pst.setString(4, txtEXistencias.getText());
+            pst.setString(4, txtPrecio.getText());
+            pst.setString(5, txtExistencias.getText());
 
             pst.executeUpdate();
 
@@ -343,8 +363,8 @@ public class inf_Productos extends javax.swing.JInternalFrame {
             txtNombre_Producto.setText("");
             txtID_Inventario.setText("");
             txtID_Proveedor.setText("");
-            txtEXistencias.setText("");
-
+            txtPrecio.setText("");
+            txtExistencias.setText("");
             txtbuscado.setText("");
             btnRegistrar.setEnabled(true);
             btnModificar.setEnabled(false);
@@ -359,13 +379,18 @@ public class inf_Productos extends javax.swing.JInternalFrame {
         txtNombre_Producto.setText("");
         txtID_Inventario.setText("");
         txtID_Proveedor.setText("");
-        txtEXistencias.setText("");
+        txtPrecio.setText("");
+        txtExistencias.setText("");
         txtbuscado.setText("");
         btnRegistrar.setEnabled(true);
         btnModificar.setEnabled(false);
         btnEliminar.setEnabled(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void txtExistenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtExistenciasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtExistenciasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -379,11 +404,13 @@ public class inf_Productos extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField txtEXistencias;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField txtExistencias;
     private javax.swing.JTextField txtID_Inventario;
     private javax.swing.JTextField txtID_Producto;
     private javax.swing.JTextField txtID_Proveedor;
     private javax.swing.JTextField txtNombre_Producto;
+    private javax.swing.JTextField txtPrecio;
     private javax.swing.JTextField txtbuscado;
     // End of variables declaration//GEN-END:variables
 }
